@@ -1,4 +1,5 @@
-cmake_minimum_required(version 3.0)
+cmake_minimum_required(VERSION 3.0)
 project(HELLO)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/)
 add_executable(client sample_clt.cpp)
 add_executable(server sample_ser.cpp)

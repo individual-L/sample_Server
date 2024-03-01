@@ -1,12 +1,13 @@
 #include<arpa/inet.h>
 #include<sys/socket.h>
 #include<string.h>
+#include<stdlib.h>
 #include<stdio.h>
 #include<unistd.h>
 #define MAXCON 5
 #define MAXBUF 1024
 
-bool errif(bool cond,char* messg);
+void errif(bool cond,const char* messg);
 
 int main(){
 //创建并初始化服务端和客户端的地址信息结构体  
@@ -33,24 +34,25 @@ while (true) {
   char buf[1024];     //定义缓冲区
   bzero(&buf, sizeof(buf));       //清空缓冲区
   //从客户端socket读到缓冲区，返回已读数据大小
-  ssize_t read_bytes = read(clnt_sockfd, buf, sizeof(buf)); 
+  ssize_t read_bytes = read(clt_sockfd, buf, sizeof(buf)); 
   if(read_bytes > 0){
-      printf("message from client fd %d: %s\n", clnt_sockfd, buf);  
-      write(clnt_sockfd, buf, sizeof(buf));           //将相同的数据写回到客户端
+      printf("message from client fd %d: %s\n", clt_sockfd, buf);  
+      write(clt_sockfd, buf, sizeof(buf));           //将相同的数据写回到客户端
   } else if(read_bytes == 0){             //read返回0，表示EOF
-      printf("client fd %d disconnected\n", clnt_sockfd);
-      close(clnt_sockfd);
+      printf("client fd %d disconnected\n", clt_sockfd);
+      close(clt_sockfd);
       break;
   } else if(read_bytes == -1){        //read返回-1，表示发生错误，按照上文方法进行错误处理
-      close(clnt_sockfd);
+      close(clt_sockfd);
       errif(true, "socket read error");
   }
 }
+return 0;
 }
 
-bool errif(bool cond,char* messg){
+void errif(bool cond,const char* messg){
   if(cond){
-    perror("%s",messg);
+    perror(messg);
     exit(EXIT_FAILURE);
   }
 }
