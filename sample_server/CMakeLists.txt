@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project(HELLO)
+set(SRC sample_clt.cpp)
+add_executable(server sample_ser.cpp)
+add_executable(client ${SRC})
+add_compile_options("-wall -std=c++11")
