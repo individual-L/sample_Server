@@ -56,7 +56,7 @@ int main(){
 
         int clt_sockfd = accept(events[i].data.fd,(sockaddr*)&clt_addr,&clt_addr_len);
         errif(clt_sockfd == -1,"accept create error!");
-        printf("new client fd:%d,IP:%s,Port:%d\n",clt_sockfd,inet.ntoa(clt_addr.sin_addr),ntohs(clt_addr.sin_port));
+        printf("new client fd:%d,IP:%s,Port:%d\n",clt_sockfd,inet_ntoa(clt_addr.sin_addr),ntohs(clt_addr.sin_port));
 
         memset(&ev,0,sizeof(ev));
         ev.data.fd = clt_sockfd;
