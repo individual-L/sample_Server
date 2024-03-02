@@ -29,8 +29,9 @@ int main(){
   //将修改服务端sokect的地址信息，并检测异常
   errif(bind(sockfd , (sockaddr*)&serv_addr , sizeof(serv_addr)) == -1,"bind error!");
   //监听是否有连接请求
+  printf("开始测试........");
   errif(listen(sockfd,SOMAXCONN) == -1,"listen error!");
-
+  printf("开始测试........1");
   int epfd = epoll_create1(0);
   errif(epfd == -1 ,"epoll create error!");
   //创建epoll结构体数组
@@ -41,12 +42,12 @@ int main(){
   ev.data.fd = sockfd;
   //将服务器sock fd添加到epoll数组中
   epoll_ctl(epfd,EPOLL_CTL_ADD,sockfd,&ev);
-
+  printf("开始测试........");
   while (true) {
     //监听事件响应
     int nfds = epoll_wait(epfd,events,MAXEVE,-1);
     errif(nfds == -1,"epoll waite error!");
-    for(int i = 3;i < nfds;++i){
+    for(int i = 0;i < nfds;++i){
       //检测发生事件的是否是服务器端sock
       if(events[i].data.fd == sockfd){
         //新客服端连接
