@@ -32,9 +32,11 @@ int main(){
   errif(listen(sockfd,SOMAXCONN) == -1,"listen error!");
 
   int epfd = epoll_create1(0);
+  errif(epfd == -1 ,"epoll create error!");
   //创建epoll结构体数组
   struct epoll_event events[MAXEVE],ev;
-  ev.events = EPOLLIN;
+  memset(&events,0,sizeof(events));
+  ev.events = EPOLLIN | EPOLLET;
   //这个IO为服务器端sock fd
   ev.data.fd = sockfd;
   //将服务器sock fd添加到epoll数组中
