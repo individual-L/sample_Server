@@ -6,6 +6,7 @@
 #include<stdio.h>
 #include<unistd.h>
 #include<errno.h>
+#include<fcntl.h>
 #define MAXCON 5
 #define MAXBUF 1024
 #define MAXEVE 100
@@ -39,23 +40,19 @@ int main(){
   //将服务器sock fd添加到epoll数组中
   epoll_ctl(epfd,EPOLL_CTL_ADD,sockfd,&ev);
 
-  //接受客户端的地址结构体
-  int clt_sockfd = accept(sockfd,(sockaddr*)&clt_addr,&clt_addr_len);
-  errif(clt_sockfd == -1,"accept create error!");
-
   while (true) {
     //监听事件响应
     int nfds = epoll_wait(epfd,events,MAXEVE,-1);
     errif(nfds == -1,"epoll waite error!");
-    for(int i = 3,i < nfds;++i){
+    for(int i = 3;i < nfds;++i){
       //检测发生事件的是否是服务器端sock
       if(events[i].data.fd == sockfd){
         //新客服端连接
-        struct sockaddr_in clt_sockfd;
+        struct sockaddr_in clt_addr;
         socklen_t clt_addr_len = sizeof(clt_addr);
-        memeset(&clt_sockfd,0,sizeof(clt_sockfd));
+        memset(&clt_addr,0,sizeof(clt_addr));
 
-        int clt_sockfd = accept(sockfd,(sockaddr*)&clt_addr,&clt_addr_len);
+        int clt_sockfd = accept(events[i].data.fd,(sockaddr*)&clt_addr,&clt_addr_len);
         errif(clt_sockfd == -1,"accept create error!");
         printf("new client fd:%d,IP:%s,Port:%d\n",clt_sockfd,inet.ntoa(clt_addr.sin_addr),ntohs(clt_addr.sin_port));
 
