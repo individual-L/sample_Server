@@ -27,6 +27,9 @@ while(true){
   memset(&buf,0,sizeof(buf));
   //从键盘输入信息到缓冲区
   scanf("%s",buf);
+  if(strcmp(buf,"Q") == 0){
+  	break;
+  }
   //将缓冲区的信息发送到服务端，并返回数据大小
   ssize_t tmp = write(sockfd,buf,sizeof(buf));
   //检测是否发生异常
