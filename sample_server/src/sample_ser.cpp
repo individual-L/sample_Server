@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<unistd.h>
 #include<errno.h>
 #include"Inet_Addr.h"
 #include"Sock.h"
@@ -15,40 +16,40 @@ int main(){
   //初始化服务端和客户端的地址信息类  
   Inet_Addr* ser_addr = new Inet_Addr("127.0.0.1",9091);
   //创建服务端socket
-  Sock sockfd = new Sock();
+  Sock *sockfd = new Sock();
   //将修改服务端sokect的地址信息
-  sockfd.bind(ser_addr);
+  sockfd->bind(ser_addr);
   //这个IO为服务器端sock fd
-  sockfd.setnonblocking();
+  sockfd->setnonblocking();
   //监听是否有连接请求
-  sockfd.listen(10);
+  sockfd->listen(10);
   //创建epoll结构体数组
-  Epolls vcr_ep = new Epolls();
+  Epolls *vcr_ep = new Epolls();
   //将服务器sock fd添加到epoll数组中
-  vcr_ep.addEpoll(sockfd.getFd(),EPOLLIN | EPOLLET);
+  vcr_ep->addEpoll(sockfd->getFd(),EPOLLIN | EPOLLET);
   while (true) {
     //监听事件响应
-    std::vector<epoll_event> nfds = vcr_ep.polls();
+    std::vector<epoll_event> nfds = vcr_ep->polls();
     for(int i = 0;i < nfds.size();++i){
       //检测发生事件的是否是服务器端sock
-      if(nfds[i].data.fd == sockfd.getFd()){
+      if(nfds[i].data.fd == sockfd->getFd()){
         //新客户端连接
         Inet_Addr* clt_addr = new Inet_Addr();
-        Sock* clt_sockfd = new Sock(sockfd.accept(clt_addr));
+        Sock* clt_sockfd = new Sock(sockfd->accept(clt_addr));
         clt_sockfd->setnonblocking();
 
         printf("new client fd:%d,IP:%s,Port:%d\n",clt_sockfd->getFd(),inet_ntoa(clt_addr->soaddr.sin_addr),ntohs(clt_addr->soaddr.sin_port));
 
-        vcr_ep.addEpoll(clt_sockfd->getFd(),EPOLLIN | EPOLLET);
+        vcr_ep->addEpoll(clt_sockfd->getFd(),EPOLLIN | EPOLLET);
       //可读事件
       }else if(nfds[i].events & EPOLLIN){
-
+	handleReadEvent(nfds[i].data.fd);
       }else{
         printf("something else happended!");
       }
     }
   }
-  close(sockfd);
+  close(sockfd->getFd());
   return 0;
 }
 
@@ -74,3 +75,4 @@ void handleReadEvent(int fd){
         }
     }
 }
+

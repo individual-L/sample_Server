@@ -1,9 +1,10 @@
 #ifndef SOCKCLASS
 #define SOCKCLASS
 #include<arpa/inet.h>
-#include<sys/sokect.h>
+#include<sys/socket.h>
 #include<fcntl.h>
 #include<iostream>
+#include<unistd.h>
 #include"Sock.h"
 #include"Inet_Addr.h"
 #include"util.h"
@@ -21,13 +22,13 @@ Sock::~Sock(){
   }
 }
 void Sock::bind(const Inet_Addr* iaddr){
-  errif(bind(sockfd,(sockaddr*)&(iaddr->soaddr),iaddr->sock_len) == -1,"bind create error!");
+  errif(::bind(sockfd,(sockaddr*)&(iaddr->soaddr),iaddr->addr_len) == -1,"bind create error!");
 }
 void Sock::listen(const int maxfd){
-  errif(listen(sockfd,maxfd) == -1,"listen create error!");
+  errif(::listen(sockfd,maxfd) == -1,"listen create error!");
 }
-int Sock::accept(const Inet_Addr * addr){
-  int clt_fd = accept(sockfd,(sockaddr*)&(addr->soaddr),&addr->addr_len);
+int Sock::accept(Inet_Addr * addr){
+  int clt_fd = ::accept(sockfd,(sockaddr*)&(addr->soaddr),&(addr->addr_len));
   errif(clt_fd == -1,"accept create error!");
   return clt_fd;
 }

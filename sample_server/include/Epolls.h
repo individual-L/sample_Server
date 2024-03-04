@@ -1,6 +1,7 @@
 #ifndef EPOLLCLASS_H
 #define EPOLLCLASS_H
 #include<sys/epoll.h>
+#include<vector>
 class Epolls{
   private:
     int efd;
@@ -9,11 +10,12 @@ class Epolls{
     Epolls();
     ~Epolls();
     //添加event到event树中
-    void addEpoll(const int,const uint16_t op);
+    void addEpoll(const int,const uint32_t op);
     //返回触发事件的sockfd数组
-    std::vector<epoll_event> polls(int timeout == -1);
+    std::vector<epoll_event> polls(int timeout = -1);
 };
 
 
 
 #endif
+

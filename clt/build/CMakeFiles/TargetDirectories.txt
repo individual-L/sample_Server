@@ -1,0 +1,3 @@
+/home/luo/code/clt/build/CMakeFiles/client.dir
+/home/luo/code/clt/build/CMakeFiles/edit_cache.dir
+/home/luo/code/clt/build/CMakeFiles/rebuild_cache.dir

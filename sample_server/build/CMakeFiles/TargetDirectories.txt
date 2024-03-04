@@ -1,0 +1,3 @@
+/home/luo/code/sample_server/build/CMakeFiles/server.dir
+/home/luo/code/sample_server/build/CMakeFiles/edit_cache.dir
+/home/luo/code/sample_server/build/CMakeFiles/rebuild_cache.dir

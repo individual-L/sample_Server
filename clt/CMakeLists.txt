@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
-project(ser)
+project(clt)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/)
 file(GLOB SRC ${CMAKE_SOURCE_DIR}/src/*.cpp)
-add_executable(server ${SRC})
+add_executable(client ${SRC})
