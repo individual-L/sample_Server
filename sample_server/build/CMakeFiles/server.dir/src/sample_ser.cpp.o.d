@@ -119,4 +119,5 @@ CMakeFiles/server.dir/src/sample_ser.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
- /usr/include/c++/11/bits/vector.tcc
+ /usr/include/c++/11/bits/vector.tcc \
+ /home/luo/code/sample_server/include/Channel.h

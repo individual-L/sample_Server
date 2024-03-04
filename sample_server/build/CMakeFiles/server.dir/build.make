@@ -69,10 +69,24 @@ include CMakeFiles/server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/server.dir/flags.make
 
+CMakeFiles/server.dir/src/Channel.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/Channel.cpp.o: ../src/Channel.cpp
+CMakeFiles/server.dir/src/Channel.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/src/Channel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/Channel.cpp.o -MF CMakeFiles/server.dir/src/Channel.cpp.o.d -o CMakeFiles/server.dir/src/Channel.cpp.o -c /home/luo/code/sample_server/src/Channel.cpp
+
+CMakeFiles/server.dir/src/Channel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/src/Channel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luo/code/sample_server/src/Channel.cpp > CMakeFiles/server.dir/src/Channel.cpp.i
+
+CMakeFiles/server.dir/src/Channel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/src/Channel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luo/code/sample_server/src/Channel.cpp -o CMakeFiles/server.dir/src/Channel.cpp.s
+
 CMakeFiles/server.dir/src/Epolls.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/Epolls.cpp.o: ../src/Epolls.cpp
 CMakeFiles/server.dir/src/Epolls.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/src/Epolls.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/src/Epolls.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/Epolls.cpp.o -MF CMakeFiles/server.dir/src/Epolls.cpp.o.d -o CMakeFiles/server.dir/src/Epolls.cpp.o -c /home/luo/code/sample_server/src/Epolls.cpp
 
 CMakeFiles/server.dir/src/Epolls.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/server.dir/src/Epolls.cpp.s: cmake_force
 CMakeFiles/server.dir/src/Inet_Addr.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/Inet_Addr.cpp.o: ../src/Inet_Addr.cpp
 CMakeFiles/server.dir/src/Inet_Addr.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/src/Inet_Addr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/src/Inet_Addr.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/Inet_Addr.cpp.o -MF CMakeFiles/server.dir/src/Inet_Addr.cpp.o.d -o CMakeFiles/server.dir/src/Inet_Addr.cpp.o -c /home/luo/code/sample_server/src/Inet_Addr.cpp
 
 CMakeFiles/server.dir/src/Inet_Addr.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/server.dir/src/Inet_Addr.cpp.s: cmake_force
 CMakeFiles/server.dir/src/Sock.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/Sock.cpp.o: ../src/Sock.cpp
 CMakeFiles/server.dir/src/Sock.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/src/Sock.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/src/Sock.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/Sock.cpp.o -MF CMakeFiles/server.dir/src/Sock.cpp.o.d -o CMakeFiles/server.dir/src/Sock.cpp.o -c /home/luo/code/sample_server/src/Sock.cpp
 
 CMakeFiles/server.dir/src/Sock.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/server.dir/src/Sock.cpp.s: cmake_force
 CMakeFiles/server.dir/src/sample_ser.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/sample_ser.cpp.o: ../src/sample_ser.cpp
 CMakeFiles/server.dir/src/sample_ser.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/src/sample_ser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/src/sample_ser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/sample_ser.cpp.o -MF CMakeFiles/server.dir/src/sample_ser.cpp.o.d -o CMakeFiles/server.dir/src/sample_ser.cpp.o -c /home/luo/code/sample_server/src/sample_ser.cpp
 
 CMakeFiles/server.dir/src/sample_ser.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/server.dir/src/sample_ser.cpp.s: cmake_force
 CMakeFiles/server.dir/src/util.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/util.cpp.o: ../src/util.cpp
 CMakeFiles/server.dir/src/util.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/src/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server.dir/src/util.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/src/util.cpp.o -MF CMakeFiles/server.dir/src/util.cpp.o.d -o CMakeFiles/server.dir/src/util.cpp.o -c /home/luo/code/sample_server/src/util.cpp
 
 CMakeFiles/server.dir/src/util.cpp.i: cmake_force
@@ -141,6 +155,7 @@ CMakeFiles/server.dir/src/util.cpp.s: cmake_force
 
 # Object files for target server
 server_OBJECTS = \
+"CMakeFiles/server.dir/src/Channel.cpp.o" \
 "CMakeFiles/server.dir/src/Epolls.cpp.o" \
 "CMakeFiles/server.dir/src/Inet_Addr.cpp.o" \
 "CMakeFiles/server.dir/src/Sock.cpp.o" \
@@ -150,6 +165,7 @@ server_OBJECTS = \
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
+../server: CMakeFiles/server.dir/src/Channel.cpp.o
 ../server: CMakeFiles/server.dir/src/Epolls.cpp.o
 ../server: CMakeFiles/server.dir/src/Inet_Addr.cpp.o
 ../server: CMakeFiles/server.dir/src/Sock.cpp.o
@@ -157,7 +173,7 @@ server_EXTERNAL_OBJECTS =
 ../server: CMakeFiles/server.dir/src/util.cpp.o
 ../server: CMakeFiles/server.dir/build.make
 ../server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luo/code/sample_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

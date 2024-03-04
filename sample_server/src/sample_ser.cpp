@@ -6,6 +6,7 @@
 #include<string.h>
 #include"Epolls.h"
 #include<vector>
+#include"Channel.h"
 #define MAXCON 5
 #define MAXBUF 1024
 #define MAXEVE 100
@@ -25,14 +26,15 @@ int main(){
   sockfd->listen(10);
   //创建epoll结构体数组
   Epolls *vcr_ep = new Epolls();
-  //将服务器sock fd添加到epoll数组中
-  vcr_ep->addEpoll(sockfd->getFd(),EPOLLIN | EPOLLET);
+  Channel * cha = new Channel(sockfd->getFd(),vcr_ep);
+  //将服务器sock fd添加到epoll数组中,并监听可读事件
+  cha->enableReading();
   while (true) {
     //监听事件响应
-    std::vector<epoll_event> nfds = vcr_ep->polls();
+    std::vector<Channel*> nfds = vcr_ep->polls();
     for(int i = 0;i < nfds.size();++i){
       //检测发生事件的是否是服务器端sock
-      if(nfds[i].data.fd == sockfd->getFd()){
+      if(nfds[i]->getFd() == sockfd->getFd()){
         //新客户端连接
         Inet_Addr* clt_addr = new Inet_Addr();
         Sock* clt_sockfd = new Sock(sockfd->accept(clt_addr));
@@ -40,16 +42,19 @@ int main(){
 
         printf("new client fd:%d,IP:%s,Port:%d\n",clt_sockfd->getFd(),inet_ntoa(clt_addr->soaddr.sin_addr),ntohs(clt_addr->soaddr.sin_port));
 
-        vcr_ep->addEpoll(clt_sockfd->getFd(),EPOLLIN | EPOLLET);
+        Channel *cltCha = new Channel(clt_sockfd->getFd(),vcr_ep);
+        cltCha->enableReading();
       //可读事件
-      }else if(nfds[i].events & EPOLLIN){
-	handleReadEvent(nfds[i].data.fd);
+      }else if(nfds[i]->getRevent() & EPOLLIN){
+	      handleReadEvent(nfds[i]->getFd());
       }else{
         printf("something else happended!");
       }
     }
   }
   close(sockfd->getFd());
+  delete sockfd;
+  delete ser_addr;
   return 0;
 }
 
@@ -75,4 +80,3 @@ void handleReadEvent(int fd){
         }
     }
 }
-

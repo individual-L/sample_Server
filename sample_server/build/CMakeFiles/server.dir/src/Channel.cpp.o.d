@@ -1,5 +1,5 @@
-CMakeFiles/server.dir/src/Epolls.cpp.o: \
- /home/luo/code/sample_server/src/Epolls.cpp /usr/include/stdc-predef.h \
+CMakeFiles/server.dir/src/Channel.cpp.o: \
+ /home/luo/code/sample_server/src/Channel.cpp /usr/include/stdc-predef.h \
  /home/luo/code/sample_server/include/Epolls.h \
  /usr/include/x86_64-linux-gnu/sys/epoll.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
@@ -75,15 +75,4 @@ CMakeFiles/server.dir/src/Epolls.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/luo/code/sample_server/include/util.h \
- /home/luo/code/sample_server/include/Channel.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /home/luo/code/sample_server/include/Channel.h
