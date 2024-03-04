@@ -1,25 +1,20 @@
 #include<sys/socket.h>
 #include<arpa/inet.h>
-#include<unistd.h>
-#include<stdlib.h>
 #include<string.h>
 #include<stdio.h>
+#include"Sock.h"
+#include"Inet_Addr.h"
+#include"util.h"
 #define MAXBUF 1024
 
-//错误处理函数
-void errif(bool cond,const char* messg);
 
 int main(){
 //创建并初始化地址结构体
-struct sockaddr_in serv_addr;
-memset(&serv_addr,0, sizeof(serv_addr));
-serv_addr.sin_family = AF_INET;
-serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-serv_addr.sin_port = htons(8888);
+Inet_Addr ser_addr = new Inet_Addr("127.0.0.1",9091);
 //创建sokect
-int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+Sock sockfd = new Sock();
 //与服务端进行连接
-errif(connect(sockfd, (sockaddr*)&serv_addr, sizeof(serv_addr)) == -1,"connect error!");  
+errif(connect(sockfd, (sockaddr*)&ser_addr.soaddr, ser_addr.sock_len) == -1,"connect error!");  
 
 while(true){
   //创建并初始化缓冲区
@@ -52,12 +47,4 @@ while(true){
 }
 
 
-}
-
-
-void errif(bool cond,const char* messg){
-  if(cond){
-    perror(messg);
-    exit(EXIT_FAILURE);
-  }
 }
