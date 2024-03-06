@@ -27,8 +27,8 @@ void Sock::bind(const Inet_Addr* iaddr){
 void Sock::listen(const int maxfd){
   errif(::listen(sockfd,maxfd) == -1,"listen create error!");
 }
-int Sock::accept(Inet_Addr * addr){
-  int clt_fd = ::accept(sockfd,(sockaddr*)&(addr->soaddr),&(addr->addr_len));
+int Sock::accept(Inet_Addr * clt_addr){
+  int clt_fd = ::accept(sockfd,(sockaddr*)&(clt_addr->soaddr),&(clt_addr->addr_len));
   errif(clt_fd == -1,"accept create error!");
   return clt_fd;
 }

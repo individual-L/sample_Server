@@ -1,14 +1,14 @@
-#include"Epolls.h"
+#include"Eventloop.h"
 #include"Channel.h"
 
 
 // int fd;
-//     Epolls *epls;
+//     Eventloop *elp;
 // uint32_t event;
 // uint32_t revent;
 // bool intree;
 
-Channel::Channel(int _fd,Epolls * _eps):epls(_eps),fd(_fd),event(0),revent(0),intree(false){
+Channel::Channel(int _fd,Eventloop * _elp):elp(_elp),fd(_fd),event(0),revent(0),intree(false){
 
 }
 Channel::~Channel(){
@@ -32,10 +32,19 @@ uint16_t Channel::getRevent(){
 bool Channel::getIntree(){
   return intree;
 }
+void Channel::setIntree(){
+  intree = true;
+}
 int Channel::getFd(){
   return fd;
 }
 void Channel::enableReading(){
   event = EPOLLIN | EPOLLET;
-  epls->updateChannels(this);
+  elp->updateChannels(this);
+}
+void Channel::setCallBackFun(std::function<void()> fun){
+  callback = fun;
+}
+void Channel::handleEvent(){
+  callback();
 }

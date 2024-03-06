@@ -57,6 +57,7 @@ void Epolls::updateChannels(Channel* cha){
   //不在epoll树中
   }else{
     errif(epoll_ctl(efd,EPOLL_CTL_ADD,cha->getFd(),&ev) == -1,"epoll add create error!\n");
+    cha->setIntree();
   }
 }
 

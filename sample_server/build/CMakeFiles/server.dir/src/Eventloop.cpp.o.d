@@ -1,5 +1,6 @@
-CMakeFiles/server.dir/src/Channel.cpp.o: \
- /home/luo/code/sample_server/src/Channel.cpp /usr/include/stdc-predef.h \
+CMakeFiles/server.dir/src/Eventloop.cpp.o: \
+ /home/luo/code/sample_server/src/Eventloop.cpp \
+ /usr/include/stdc-predef.h \
  /home/luo/code/sample_server/include/Eventloop.h \
  /home/luo/code/sample_server/include/Channel.h \
  /usr/include/x86_64-linux-gnu/sys/epoll.h \
@@ -101,4 +102,5 @@ CMakeFiles/server.dir/src/Channel.cpp.o: \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
- /usr/include/c++/11/bits/uniform_int_dist.h
+ /usr/include/c++/11/bits/uniform_int_dist.h \
+ /home/luo/code/sample_server/include/Epolls.h

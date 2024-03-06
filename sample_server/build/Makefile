@@ -177,6 +177,30 @@ src/Epolls.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Epolls.cpp.s
 .PHONY : src/Epolls.cpp.s
 
+src/Eventloop.o: src/Eventloop.cpp.o
+.PHONY : src/Eventloop.o
+
+# target to build an object file
+src/Eventloop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Eventloop.cpp.o
+.PHONY : src/Eventloop.cpp.o
+
+src/Eventloop.i: src/Eventloop.cpp.i
+.PHONY : src/Eventloop.i
+
+# target to preprocess a source file
+src/Eventloop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Eventloop.cpp.i
+.PHONY : src/Eventloop.cpp.i
+
+src/Eventloop.s: src/Eventloop.cpp.s
+.PHONY : src/Eventloop.s
+
+# target to generate assembly for a file
+src/Eventloop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Eventloop.cpp.s
+.PHONY : src/Eventloop.cpp.s
+
 src/Inet_Addr.o: src/Inet_Addr.cpp.o
 .PHONY : src/Inet_Addr.o
 
@@ -200,6 +224,30 @@ src/Inet_Addr.s: src/Inet_Addr.cpp.s
 src/Inet_Addr.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Inet_Addr.cpp.s
 .PHONY : src/Inet_Addr.cpp.s
+
+src/Server.o: src/Server.cpp.o
+.PHONY : src/Server.o
+
+# target to build an object file
+src/Server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Server.cpp.o
+.PHONY : src/Server.cpp.o
+
+src/Server.i: src/Server.cpp.i
+.PHONY : src/Server.i
+
+# target to preprocess a source file
+src/Server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Server.cpp.i
+.PHONY : src/Server.cpp.i
+
+src/Server.s: src/Server.cpp.s
+.PHONY : src/Server.s
+
+# target to generate assembly for a file
+src/Server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Server.cpp.s
+.PHONY : src/Server.cpp.s
 
 src/Sock.o: src/Sock.cpp.o
 .PHONY : src/Sock.o
@@ -288,9 +336,15 @@ help:
 	@echo "... src/Epolls.o"
 	@echo "... src/Epolls.i"
 	@echo "... src/Epolls.s"
+	@echo "... src/Eventloop.o"
+	@echo "... src/Eventloop.i"
+	@echo "... src/Eventloop.s"
 	@echo "... src/Inet_Addr.o"
 	@echo "... src/Inet_Addr.i"
 	@echo "... src/Inet_Addr.s"
+	@echo "... src/Server.o"
+	@echo "... src/Server.i"
+	@echo "... src/Server.s"
 	@echo "... src/Sock.o"
 	@echo "... src/Sock.i"
 	@echo "... src/Sock.s"
