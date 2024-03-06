@@ -7,23 +7,17 @@
 #include<stdio.h>
 #include<unistd.h>
 #include<errno.h>
+#include"Accept.h"
 #define MAXCON 100
 #define MAXBUF 1024
 
-Server::Server(Eventloop * _elp):elp(_elp){
-  Sock* sock = new Sock();
-  Inet_Addr* addr = new Inet_Addr("127.0.0.1",9091);
-  sock->bind(addr);
-  sock->listen(MAXCON);
-  sock->setnonblocking();
+Server::Server(Eventloop * _elp):elp(_elp),act(nullptr){
+  act = new Accept(elp);
+  act->setNewConnectCallBack(std::bind(&Server::newConnect,this,std::placeholders::_1));
 
-  Channel * cha = new Channel(sock->getFd(),elp);
-  std::function<void()> cb = std::bind(&Server::newConnect,this,sock);
-  cha->setCallBackFun(cb);
-  cha->enableReading();
 }
 Server::~Server(){
-
+  delete act;
 }
 void Server::handleReadEvent(int fd){
     char buf[MAXBUF];     //定义缓冲区

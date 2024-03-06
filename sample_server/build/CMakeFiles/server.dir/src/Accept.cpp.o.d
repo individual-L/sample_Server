@@ -1,6 +1,5 @@
-CMakeFiles/server.dir/src/Server.cpp.o: \
- /home/luo/code/sample_server/src/Server.cpp /usr/include/stdc-predef.h \
- /home/luo/code/sample_server/include/Server.h \
+CMakeFiles/server.dir/src/Accept.cpp.o: \
+ /home/luo/code/sample_server/src/Accept.cpp /usr/include/stdc-predef.h \
  /home/luo/code/sample_server/include/Sock.h \
  /home/luo/code/sample_server/include/Inet_Addr.h \
  /usr/include/arpa/inet.h /usr/include/features.h \
@@ -55,12 +54,7 @@ CMakeFiles/server.dir/src/Server.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h \
- /home/luo/code/sample_server/include/Channel.h \
- /usr/include/x86_64-linux-gnu/sys/epoll.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/epoll.h \
+ /home/luo/code/sample_server/include/Accept.h \
  /usr/include/c++/11/functional \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -110,6 +104,7 @@ CMakeFiles/server.dir/src/Server.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -121,26 +116,9 @@ CMakeFiles/server.dir/src/Server.cpp.o: \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
- /usr/include/c++/11/bits/uniform_int_dist.h /usr/include/string.h \
- /usr/include/strings.h /usr/include/stdio.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
- /home/luo/code/sample_server/include/Accept.h
+ /usr/include/c++/11/bits/uniform_int_dist.h \
+ /home/luo/code/sample_server/include/Channel.h \
+ /usr/include/x86_64-linux-gnu/sys/epoll.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/epoll.h

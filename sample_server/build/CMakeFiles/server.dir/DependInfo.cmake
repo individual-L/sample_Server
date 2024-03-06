@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/luo/code/sample_server/src/Accept.cpp" "CMakeFiles/server.dir/src/Accept.cpp.o" "gcc" "CMakeFiles/server.dir/src/Accept.cpp.o.d"
   "/home/luo/code/sample_server/src/Channel.cpp" "CMakeFiles/server.dir/src/Channel.cpp.o" "gcc" "CMakeFiles/server.dir/src/Channel.cpp.o.d"
   "/home/luo/code/sample_server/src/Epolls.cpp" "CMakeFiles/server.dir/src/Epolls.cpp.o" "gcc" "CMakeFiles/server.dir/src/Epolls.cpp.o.d"
   "/home/luo/code/sample_server/src/Eventloop.cpp" "CMakeFiles/server.dir/src/Eventloop.cpp.o" "gcc" "CMakeFiles/server.dir/src/Eventloop.cpp.o.d"

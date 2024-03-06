@@ -24,8 +24,8 @@ Sock::~Sock(){
 void Sock::bind(const Inet_Addr* iaddr){
   errif(::bind(sockfd,(sockaddr*)&(iaddr->soaddr),iaddr->addr_len) == -1,"bind create error!");
 }
-void Sock::listen(const int maxfd){
-  errif(::listen(sockfd,maxfd) == -1,"listen create error!");
+void Sock::listen(){
+  errif(::listen(sockfd,SOMAXCONN) == -1,"listen create error!");
 }
 int Sock::accept(Inet_Addr * clt_addr){
   int clt_fd = ::accept(sockfd,(sockaddr*)&(clt_addr->soaddr),&(clt_addr->addr_len));

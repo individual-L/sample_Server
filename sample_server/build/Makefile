@@ -129,6 +129,30 @@ server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+src/Accept.o: src/Accept.cpp.o
+.PHONY : src/Accept.o
+
+# target to build an object file
+src/Accept.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Accept.cpp.o
+.PHONY : src/Accept.cpp.o
+
+src/Accept.i: src/Accept.cpp.i
+.PHONY : src/Accept.i
+
+# target to preprocess a source file
+src/Accept.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Accept.cpp.i
+.PHONY : src/Accept.cpp.i
+
+src/Accept.s: src/Accept.cpp.s
+.PHONY : src/Accept.s
+
+# target to generate assembly for a file
+src/Accept.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Accept.cpp.s
+.PHONY : src/Accept.cpp.s
+
 src/Channel.o: src/Channel.cpp.o
 .PHONY : src/Channel.o
 
@@ -330,6 +354,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... server"
+	@echo "... src/Accept.o"
+	@echo "... src/Accept.i"
+	@echo "... src/Accept.s"
 	@echo "... src/Channel.o"
 	@echo "... src/Channel.i"
 	@echo "... src/Channel.s"
