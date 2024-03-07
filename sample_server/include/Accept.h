@@ -2,13 +2,11 @@
 #define ACCEPT_H
 #include<functional>
 class Sock;
-class Inet_Addr;
 class Eventloop;
 class Channel;
 class Accept{
   private:
   Sock * sockfd;
-  Inet_Addr* addr;
   Eventloop* elp;
   Channel * cha;
   std::function<void(Sock*)> newConnectCallBack;

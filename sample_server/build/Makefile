@@ -177,6 +177,30 @@ src/Channel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Channel.cpp.s
 .PHONY : src/Channel.cpp.s
 
+src/Connect.o: src/Connect.cpp.o
+.PHONY : src/Connect.o
+
+# target to build an object file
+src/Connect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Connect.cpp.o
+.PHONY : src/Connect.cpp.o
+
+src/Connect.i: src/Connect.cpp.i
+.PHONY : src/Connect.i
+
+# target to preprocess a source file
+src/Connect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Connect.cpp.i
+.PHONY : src/Connect.cpp.i
+
+src/Connect.s: src/Connect.cpp.s
+.PHONY : src/Connect.s
+
+# target to generate assembly for a file
+src/Connect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Connect.cpp.s
+.PHONY : src/Connect.cpp.s
+
 src/Epolls.o: src/Epolls.cpp.o
 .PHONY : src/Epolls.o
 
@@ -360,6 +384,9 @@ help:
 	@echo "... src/Channel.o"
 	@echo "... src/Channel.i"
 	@echo "... src/Channel.s"
+	@echo "... src/Connect.o"
+	@echo "... src/Connect.i"
+	@echo "... src/Connect.s"
 	@echo "... src/Epolls.o"
 	@echo "... src/Epolls.i"
 	@echo "... src/Epolls.s"

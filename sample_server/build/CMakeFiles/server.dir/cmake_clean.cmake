@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/Accept.cpp.o.d"
   "CMakeFiles/server.dir/src/Channel.cpp.o"
   "CMakeFiles/server.dir/src/Channel.cpp.o.d"
+  "CMakeFiles/server.dir/src/Connect.cpp.o"
+  "CMakeFiles/server.dir/src/Connect.cpp.o.d"
   "CMakeFiles/server.dir/src/Epolls.cpp.o"
   "CMakeFiles/server.dir/src/Epolls.cpp.o.d"
   "CMakeFiles/server.dir/src/Eventloop.cpp.o"
