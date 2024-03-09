@@ -39,6 +39,10 @@ void Sock::setnonblocking(){
 int Sock::getFd(){
   return sockfd;
 }
+void Sock::connect(Inet_Addr*  addr){
+  errif(::connect(sockfd,(struct sockaddr*)&addr->soaddr,addr->addr_len) == -1,"connect create error!");
+}
+
 
 
 

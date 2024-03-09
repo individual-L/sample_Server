@@ -69,10 +69,24 @@ include CMakeFiles/client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/client.dir/flags.make
 
+CMakeFiles/client.dir/src/Buffer.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/Buffer.cpp.o: ../src/Buffer.cpp
+CMakeFiles/client.dir/src/Buffer.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/src/Buffer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/src/Buffer.cpp.o -MF CMakeFiles/client.dir/src/Buffer.cpp.o.d -o CMakeFiles/client.dir/src/Buffer.cpp.o -c /home/luo/code/clt/src/Buffer.cpp
+
+CMakeFiles/client.dir/src/Buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/Buffer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luo/code/clt/src/Buffer.cpp > CMakeFiles/client.dir/src/Buffer.cpp.i
+
+CMakeFiles/client.dir/src/Buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/Buffer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luo/code/clt/src/Buffer.cpp -o CMakeFiles/client.dir/src/Buffer.cpp.s
+
 CMakeFiles/client.dir/src/Inet_Addr.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/Inet_Addr.cpp.o: ../src/Inet_Addr.cpp
 CMakeFiles/client.dir/src/Inet_Addr.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/src/Inet_Addr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/src/Inet_Addr.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/src/Inet_Addr.cpp.o -MF CMakeFiles/client.dir/src/Inet_Addr.cpp.o.d -o CMakeFiles/client.dir/src/Inet_Addr.cpp.o -c /home/luo/code/clt/src/Inet_Addr.cpp
 
 CMakeFiles/client.dir/src/Inet_Addr.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/client.dir/src/Inet_Addr.cpp.s: cmake_force
 CMakeFiles/client.dir/src/Sock.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/Sock.cpp.o: ../src/Sock.cpp
 CMakeFiles/client.dir/src/Sock.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/src/Sock.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/src/Sock.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/src/Sock.cpp.o -MF CMakeFiles/client.dir/src/Sock.cpp.o.d -o CMakeFiles/client.dir/src/Sock.cpp.o -c /home/luo/code/clt/src/Sock.cpp
 
 CMakeFiles/client.dir/src/Sock.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/client.dir/src/Sock.cpp.s: cmake_force
 CMakeFiles/client.dir/src/sample_clt.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/sample_clt.cpp.o: ../src/sample_clt.cpp
 CMakeFiles/client.dir/src/sample_clt.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/src/sample_clt.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/src/sample_clt.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/src/sample_clt.cpp.o -MF CMakeFiles/client.dir/src/sample_clt.cpp.o.d -o CMakeFiles/client.dir/src/sample_clt.cpp.o -c /home/luo/code/clt/src/sample_clt.cpp
 
 CMakeFiles/client.dir/src/sample_clt.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/client.dir/src/sample_clt.cpp.s: cmake_force
 CMakeFiles/client.dir/src/util.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/util.cpp.o: ../src/util.cpp
 CMakeFiles/client.dir/src/util.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/src/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/src/util.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/src/util.cpp.o -MF CMakeFiles/client.dir/src/util.cpp.o.d -o CMakeFiles/client.dir/src/util.cpp.o -c /home/luo/code/clt/src/util.cpp
 
 CMakeFiles/client.dir/src/util.cpp.i: cmake_force
@@ -127,6 +141,7 @@ CMakeFiles/client.dir/src/util.cpp.s: cmake_force
 
 # Object files for target client
 client_OBJECTS = \
+"CMakeFiles/client.dir/src/Buffer.cpp.o" \
 "CMakeFiles/client.dir/src/Inet_Addr.cpp.o" \
 "CMakeFiles/client.dir/src/Sock.cpp.o" \
 "CMakeFiles/client.dir/src/sample_clt.cpp.o" \
@@ -135,13 +150,14 @@ client_OBJECTS = \
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
+../client: CMakeFiles/client.dir/src/Buffer.cpp.o
 ../client: CMakeFiles/client.dir/src/Inet_Addr.cpp.o
 ../client: CMakeFiles/client.dir/src/Sock.cpp.o
 ../client: CMakeFiles/client.dir/src/sample_clt.cpp.o
 ../client: CMakeFiles/client.dir/src/util.cpp.o
 ../client: CMakeFiles/client.dir/build.make
 ../client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luo/code/clt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

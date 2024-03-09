@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/client.dir/src/Inet_Addr.cpp.o CMakeFiles/client.dir/src/Sock.cpp.o CMakeFiles/client.dir/src/sample_clt.cpp.o CMakeFiles/client.dir/src/util.cpp.o -o ../client 
+/usr/bin/c++ -g -rdynamic CMakeFiles/client.dir/src/Buffer.cpp.o CMakeFiles/client.dir/src/Inet_Addr.cpp.o CMakeFiles/client.dir/src/Sock.cpp.o CMakeFiles/client.dir/src/sample_clt.cpp.o CMakeFiles/client.dir/src/util.cpp.o -o ../client 

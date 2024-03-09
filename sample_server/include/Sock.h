@@ -19,6 +19,7 @@ class Sock{
   void setnonblocking();
   //获取socket文件描述符
   int getFd();
+  void connect(Inet_Addr*);
 
 };
 
