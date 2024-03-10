@@ -46,5 +46,6 @@ void Channel::setCallBackFun(std::function<void()> fun){
   callback = fun;
 }
 void Channel::handleEvent(){
-  callback();
+  elp->addTask(callback);
+  //callback();
 }

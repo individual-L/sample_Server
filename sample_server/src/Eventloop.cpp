@@ -2,8 +2,9 @@
 #include"Channel.h"
 #include"Epolls.h"
 
-  Eventloop::Eventloop(){
+  Eventloop::Eventloop():ep(nullptr),quit(false),tp(nullptr){
     ep = new Epolls();
+    tp = new ThreadPool();
   }
   Eventloop::~Eventloop(){
     delete ep;
@@ -18,4 +19,7 @@
   }
   void Eventloop::updateChannels(Channel *cha){
     ep->updateChannels(cha);
+  }
+  void Eventloop::addTask(std::function<void()> func){
+    tp->addTask(func);
   }

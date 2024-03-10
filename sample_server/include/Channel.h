@@ -17,6 +17,7 @@ class Channel{
     bool intree;
     //设置回调函数
     std::function<void()> callback;
+
   public:
     Channel(int _fd,Eventloop *);
     ~Channel();

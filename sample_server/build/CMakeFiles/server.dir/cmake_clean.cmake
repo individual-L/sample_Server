@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/Server.cpp.o.d"
   "CMakeFiles/server.dir/src/Sock.cpp.o"
   "CMakeFiles/server.dir/src/Sock.cpp.o.d"
+  "CMakeFiles/server.dir/src/ThreadPool.cpp.o"
+  "CMakeFiles/server.dir/src/ThreadPool.cpp.o.d"
   "CMakeFiles/server.dir/src/sample_ser.cpp.o"
   "CMakeFiles/server.dir/src/sample_ser.cpp.o.d"
   "CMakeFiles/server.dir/src/util.cpp.o"

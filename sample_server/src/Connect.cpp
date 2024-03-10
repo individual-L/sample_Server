@@ -41,14 +41,11 @@ void Connect::echo(int fd){
         break;
       }else if(read_bytes == 0){//表示EOF，客户端断开
         printf("EOF,client sock %d disconnected\n",fd);
-        close(fd);//关闭socket会自动从epoll树上删除
+        deleteConnectCallBack(sock);//关闭socket会自动从epoll树上删除
         break;
       }
   }
 }
 void Connect::setDeleteConnectCallBack(std::function<void(Sock*)> cb){
   deleteConnectCallBack = cb;
-}
-void Connect::deleteCon(){
-  deleteConnectCallBack(sock);
 }
