@@ -15,7 +15,7 @@ class Server{
     ~Server();
     void newConnect(Sock *);
     void handleReadEvent(int );
-    void deleteConnect(Sock *);
+    void deleteConnect(int);
 };
 
 #endif

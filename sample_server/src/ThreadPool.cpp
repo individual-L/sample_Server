@@ -40,16 +40,3 @@ ThreadPool::~ThreadPool(){
   }
 
 }
-void ThreadPool::addTask(std::function<void()> func){
-  //在这个作用域对std::mutex进行加锁，离开作用域会自动解锁
-  {
-    std::unique_lock<std::mutex> lock(task_mtx);
-    if(stop){
-      throw std::runtime_error("ThreadPool already stop,can't add task any more");
-    }
-    //通知一次条件变量
-    tasks.emplace(func);
-  }
-  std::cout<<"one notice......"<<std::endl;
-  cv.notify_one();
-}

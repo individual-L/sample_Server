@@ -16,22 +16,26 @@ class Channel{
     //是否在epoll树中
     bool intree;
     //设置回调函数
-    std::function<void()> callback;
+    std::function<void()> readCallback;
+    std::function<void()> writeCallback;
+    //是否使用线程池
+    bool useThreadpool;
 
   public:
     Channel(int _fd,Eventloop *);
     ~Channel();
     void setEvent(uint32_t _event);
     void setRevent(uint32_t _revent);
-    void setIntree(bool _intree);
-    void setIntree();
     uint32_t getEvent();
-    uint16_t getRevent();
+    uint32_t getRevent();
     bool getIntree();
     int getFd();
-    
+    void setET();
+    void setIntree();
+    void setUseThreadPool(bool);
     void enableReading();
-    void setCallBackFun(std::function<void()>);
+    void setReadCallBackFun(std::function<void()>);
+    void setWriteCallBackFun(std::function<void()>);
     void handleEvent();
 
 };

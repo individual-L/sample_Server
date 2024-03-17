@@ -11,13 +11,13 @@ class Connect{
     Channel * cha;
     Sock * sock;
     Buffer* readBuffer;
-    std::function<void(Sock*)> deleteConnectCallBack;
+    std::function<void(int)> deleteConnectCallBack;
   public:
   Connect(Eventloop *_elp,Sock *_sock);
   ~Connect();
 
   void echo(int _fd);
-  void setDeleteConnectCallBack(std::function<void(Sock*)>);
+  void setDeleteConnectCallBack(std::function<void(int)>);
   void deleteCon();
 
 };
