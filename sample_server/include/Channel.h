@@ -32,7 +32,6 @@ class Channel{
     int getFd();
     void setET();
     void setIntree();
-    void setUseThreadPool(bool);
     void enableReading();
     void setReadCallBackFun(std::function<void()>);
     void setWriteCallBackFun(std::function<void()>);

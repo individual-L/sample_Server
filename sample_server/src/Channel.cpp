@@ -55,20 +55,9 @@ void Channel::setWriteCallBackFun(std::function<void()> fun){
 }
 void Channel::handleEvent(){
   if(revent &(EPOLLIN | EPOLLPRI)){
-    if(useThreadpool){
-      elp->addTask(readCallback);
-    }else{
       readCallback();
-    }
   }else if(revent & EPOLLOUT){
-    if(useThreadpool){
-      elp->addTask(writeCallback);
-    }else{
       writeCallback();
-    }
   }
 
-}
-void Channel::setUseThreadPool(bool bl){
-  useThreadpool = bl;
 }

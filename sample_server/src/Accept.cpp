@@ -11,12 +11,9 @@ Accept::Accept(Eventloop * _elp):elp(_elp){
   Inet_Addr *addr = new Inet_Addr("127.0.0.1",9091);
   sockfd->bind(addr);
   sockfd->listen();
-  // sockfd->setnonblocking();
-
   cha =new Channel(sockfd->getFd(),elp);
   cha->setReadCallBackFun(std::bind(&Accept::acceptConnect,this));
   cha->enableReading();
-  cha->setUseThreadPool(false);
   delete addr;
 }
 Accept::~Accept(){

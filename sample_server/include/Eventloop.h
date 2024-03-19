@@ -9,13 +9,11 @@ class Eventloop{
   private:
     bool quit;
     Epolls *ep;
-    ThreadPool* tp;
   public:
     Eventloop();
     ~Eventloop();
     void loop();
     void updateChannels(Channel *);
-    void addTask(std::function<void()>);
 };
 
 #endif

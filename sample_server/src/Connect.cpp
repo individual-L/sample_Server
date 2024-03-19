@@ -16,7 +16,6 @@ Connect::Connect(Eventloop *_elp,Sock *_sock):elp(_elp),sock(_sock),cha(nullptr)
   std::function<void()> cb = std::bind(&Connect::echo,this,sock->getFd());
   cha->setReadCallBackFun(cb);
   cha->enableReading();
-  cha->setUseThreadPool(true);
   readBuffer = new Buffer();
 }
 Connect::~Connect(){
